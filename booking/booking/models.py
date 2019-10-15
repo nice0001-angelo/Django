@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 
 class Booking(models.Model):
-    subscriber = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name='booking')
+    subscriber = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name='bookings')
 
     date_from = models.DateField()
     date_to = models.DateField(null=True, blank=True)
